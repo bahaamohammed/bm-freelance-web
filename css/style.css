@@ -210,3 +210,102 @@ body {
         padding: 15px;
     }
 }
+
+/* أنماط صفحات التحقق والتفعيل */
+.verification-icon,
+.success-icon {
+    text-align: center;
+    font-size: 64px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.success-icon {
+    color: #4CAF50;
+}
+
+.verification-steps {
+    margin: 25px 0;
+}
+
+.verification-steps p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.verification-steps i {
+    color: #4CAF50;
+}
+
+.resend-btn {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.resend-timer {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* أنماط OTP */
+.otp-inputs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.otp-inputs input {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.otp-inputs input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Animation للأيقونات */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.verification-icon i,
+.success-icon i {
+    animation: bounce 2s infinite;
+}
