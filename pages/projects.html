@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المشاريع المتاحة - منصة العمل الحر</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="projects-container">
+        <!-- نفس شريط التنقل السابق -->
+        <nav class="main-nav">
+            <!-- ... محتوى النافبار ... -->
+        </nav>
+
+        <div class="projects-content">
+            <div class="projects-filters">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="ابحث عن مشاريع...">
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>التخصص</label>
+                        <select>
+                            <option>جميع التخصصات</option>
+                            <option>تطوير الويب</option>
+                            <option>تصميم جرافيك</option>
+                            <option>تسويق رقمي</option>
+                            <option>كتابة محتوى</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>الميزانية</label>
+                        <div class="price-range">
+                            <input type="number" placeholder="من">
+                            <span>-</span>
+                            <input type="number" placeholder="إلى">
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>المدة</label>
+                        <select>
+                            <option>أي مدة</option>
+                            <option>أقل من أسبوع</option>
+                            <option>1-2 أسابيع</option>
+                            <option>3-4 أسابيع</option>
+                            <option>أكثر من شهر</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>المهارات</label>
+                        <div class="skills-tags">
+                            <span class="skill-tag">HTML <i class="fas fa-times"></i></span>
+                            <span class="skill-tag">CSS <i class="fas fa-times"></i></span>
+                            <input type="text" placeholder="أضف مهارة...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-list">
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3>تصميم موقع شركة تقنية</h3>
+                        <span class="project-budget">
+                            <i class="fas fa-dollar-sign"></i>
+                            1500 - 2000
+                        </span>
+                    </div>
+                    
+                    <p class="project-description">
+                        نحتاج إلى تصميم موقع احترافي لشركة تقنية مع التركيز على تجربة المستخدم وسرعة التحميل...
+                    </p>
+
+                    <div class="project-meta">
+                        <span><i class="far fa-clock"></i> نُشر قبل 3 ساعات</span>
+                        <span><i class="fas fa-hourglass-half"></i> 4 أسابيع</span>
+                        <span><i class="fas fa-user-friends"></i> 12 عرض</span>
+                    </div>
+
+                    <div class="project-skills">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <button class="btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            قدم عرضك
+                        </button>
+                        <button class="btn-secondary">
+                            <i class="far fa-bookmark"></i>
+                            حفظ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- يمكن تكرار project-item حسب الحاجة -->
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
