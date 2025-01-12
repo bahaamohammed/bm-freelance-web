@@ -397,7 +397,9 @@ body {
     cursor: pointer;
     padding: 5px;
     border-radius: 25px;
-    transition: all 0.3s;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
 }
 
 .profile-btn:hover {
@@ -411,18 +413,50 @@ body {
     object-fit: cover;
 }
 
+.profile-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.profile-btn:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transition: all 0s;
+}
+
 .dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 10px);
     left: 0;
     background: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     min-width: 200px;
     padding: 10px 0;
-    margin-top: 10px;
-    display: none;
+    display: block;
     z-index: 1000;
+
+    /* إضافة الـ animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* حذف الـ hover وإضافة class جديد للظهور */
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .profile-dropdown:hover .dropdown-menu {
@@ -436,10 +470,15 @@ body {
     padding: 10px 20px;
     color: var(--text-color);
     text-decoration: none;
-    transition: background 0.3s;
+    transition: all 0.2s;
 }
 
 .dropdown-item:hover {
+    background: var(--bg-color);
+}
+
+.dropdown-item:active {
+    transform: scale(0.98);
     background: var(--bg-color);
 }
 
