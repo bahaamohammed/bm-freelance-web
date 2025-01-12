@@ -329,6 +329,21 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.nav-brand img.logo {
+    height: 72px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.nav-brand img.logo:hover {
+    transform: scale(1.05);
 }
 
 .main-menu {
@@ -504,6 +519,10 @@ body {
 
     .profile-btn img {
         width: 32px;
+        height: 32px;
+    }
+
+    .nav-brand img.logo {
         height: 32px;
     }
 }
