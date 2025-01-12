@@ -317,15 +317,12 @@ body {
 }
 
 .main-nav {
-    background: white;
-    padding: 15px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 15px 30px;
+    background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .nav-brand {
@@ -334,21 +331,142 @@ body {
     color: var(--primary-color);
 }
 
-.nav-links {
+.main-menu {
     display: flex;
     gap: 20px;
 }
 
-.nav-links a {
+.menu-item {
     text-decoration: none;
     color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 8px 15px;
     border-radius: 5px;
     transition: all 0.3s;
 }
 
-.nav-links a:hover {
+.menu-item:hover {
     background: var(--bg-color);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    color: var(--text-color);
+    transition: all 0.3s;
+}
+
+.action-btn:hover {
+    background: var(--bg-color);
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4444;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 20px;
+}
+
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.profile-btn:hover {
+    background: var(--bg-color);
+}
+
+.profile-btn img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    padding: 10px 0;
+    margin-top: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+    background: var(--bg-color);
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: #eee;
+    margin: 8px 0;
+}
+
+/* التجاوب مع الشاشات المختلفة */
+@media (max-width: 768px) {
+    .main-menu {
+        display: none;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .action-btn {
+        padding: 6px;
+    }
+
+    .profile-btn img {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 .profile-header {

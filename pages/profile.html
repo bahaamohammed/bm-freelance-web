@@ -12,13 +12,77 @@
         <!-- شريط التنقل -->
         <nav class="main-nav">
             <div class="nav-brand">منصة العمل الحر</div>
+            
             <div class="nav-links">
-                <a href="projects.html">المشاريع</a>
-                <a href="messages.html">الرسائل</a>
-                <a href="notifications.html">الإشعارات</a>
+                <div class="main-menu">
+                    <a href="projects.html" class="menu-item">
+                        <i class="fas fa-briefcase"></i>
+                        المشاريع
+                    </a>
+                    <a href="add-project.html" class="menu-item">
+                        <i class="fas fa-plus-circle"></i>
+                        أضف مشروع
+                    </a>
+                    <a href="my-proposals.html" class="menu-item">
+                        <i class="fas fa-file-alt"></i>
+                        عروضي
+                    </a>
+                    <a href="portfolio.html" class="menu-item">
+                        <i class="fas fa-images"></i>
+                        أعمالي
+                    </a>
+                </div>
             </div>
-            <div class="nav-profile">
-                <img src="https://placehold.co/40" alt="الصورة الشخصية">
+
+            <div class="nav-actions">
+                <button class="action-btn search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <button class="action-btn messages-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                
+                <button class="action-btn notifications-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">5</span>
+                </button>
+
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <img src="https://placehold.co/40" alt="الصورة الشخصية">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="dropdown-menu">
+                        <a href="profile.html" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            أحمد محمد
+                        </a>
+                        <a href="favorites.html" class="dropdown-item">
+                            <i class="fas fa-heart"></i>
+                            مفضلتي
+                        </a>
+                        <a href="balance.html" class="dropdown-item">
+                            <i class="fas fa-wallet"></i>
+                            الرصيد
+                        </a>
+                        <a href="settings.html" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            الإعدادات
+                        </a>
+                        <a href="help.html" class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            المساعدة
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="logout.html" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            تسجيل الخروج
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
 
