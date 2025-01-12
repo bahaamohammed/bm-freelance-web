@@ -594,35 +594,85 @@ body {
 
 .profile-tabs {
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 0 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .tabs {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 2px solid #eee;
 }
 
 .tab {
-    padding: 10px 20px;
+    padding: 10px 25px;
     border: none;
-    background: white;
-    border-radius: 5px;
+    background: none;
+    color: #666;
     cursor: pointer;
+    font-size: 16px;
+    position: relative;
     transition: all 0.3s;
 }
 
-.tab.active {
+.tab::after {
+    content: '';
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    width: 100%;
+    height: 3px;
     background: var(--primary-color);
-    color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.tab.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.tab.active::after {
+    transform: scaleX(1);
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    padding: 30px 20px;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* تحسين الانيميشن للمحتوى */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-content.active {
+    animation: fadeIn 0.3s ease forwards;
 }
 
 .info-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
 }
 
 .info-item {
@@ -650,12 +700,10 @@ body {
 
 /* أنماط المشاريع المنجزة */
 .project-card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
 }
 
 .project-card:hover {
@@ -720,7 +768,7 @@ body {
 /* أنماط معرض الأعمال */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -1213,4 +1261,37 @@ input:checked+.slider:before {
     .price {
         font-size: 36px;
     }
+}
+
+/* تحسين مظهر العناوين */
+.tab-content h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    position: relative;
+    padding-right: 15px;
+}
+
+.tab-content h3::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* إضافة تأثيرات حركية للبطاقات */
+.project-card,
+.portfolio-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover,
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
