@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أضف مشروع - منصة العمل الحر</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- نفس شريط التنقل السابق -->
+        <nav class="main-nav">
+            <div class="nav-brand"><img src="../images/logo.png" alt="منصة العمل الحر" class="logo"></div>
+            <div class="nav-links">
+                <div class="main-menu">
+                    <a href="projects.html" class="menu-item">
+                        <i class="fas fa-briefcase"></i>
+                        المشاريع
+                    </a>
+                    <a href="add-project.html" class="menu-item">
+                        <i class="fas fa-plus-circle"></i>
+                        أضف مشروع
+                    </a>
+                    <a href="my-proposals.html" class="menu-item">
+                        <i class="fas fa-file-alt"></i>
+                        عروضي
+                    </a>
+                    <a href="portfolio.html" class="menu-item">
+                        <i class="fas fa-images"></i>
+                        أعمالي
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="action-btn search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <div class="messages-dropdown">
+                    <button class="action-btn messages-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    
+                    <div class="messages-menu">
+                        <div class="menu-header">
+                            <h3>الرسائل</h3>
+                            <a href="messages.html">عرض الكل</a>
+                        </div>
+                        <div class="messages-list">
+                            <a href="#" class="message-item unread">
+                                <img src="https://placehold.co/40" alt="صورة المرسل">
+                                <div class="message-content">
+                                    <div class="message-info">
+                                        <h4>سارة أحمد</h4>
+                                        <span class="message-time">منذ 5 دقائق</span>
+                                    </div>
+                                    <p>تم استلام العمل، شكراً جزيلاً...</p>
+                                </div>
+                            </a>
+                            <!-- يمكن تكرار message-item -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="notifications-dropdown">
+                    <button class="action-btn notifications-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    
+                    <div class="notifications-menu">
+                        <div class="menu-header">
+                            <h3>الإشعارات</h3>
+                            <a href="notifications.html">عرض الكل</a>
+                        </div>
+                        <div class="notifications-list">
+                            <a href="#" class="notification-item unread">
+                                <div class="notification-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p>تم قبول عرضك في مشروع "تصميم موقع إلكتروني"</p>
+                                    <span class="notification-time">منذ ساعة</span>
+                                </div>
+                            </a>
+                            <!-- يمكن تكرار notification-item -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <img src="https://placehold.co/40" alt="الصورة الشخصية">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="dropdown-menu">
+                        <a href="profile.html" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            أحمد محمد
+                        </a>
+                        <a href="favorites.html" class="dropdown-item">
+                            <i class="fas fa-heart"></i>
+                            مفضلتي
+                        </a>
+                        <a href="balance.html" class="dropdown-item">
+                            <i class="fas fa-wallet"></i>
+                            الرصيد
+                        </a>
+                        <a href="settings.html" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            الإعدادات
+                        </a>
+                        <a href="help.html" class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            المساعدة
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="logout.html" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            تسجيل الخروج
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <h1 class="page-title">إضافة مشروع جديد</h1>
+            
+            <form class="add-project-form">
+                <div class="form-group">
+                    <label for="projectName">اسم المشروع</label>
+                    <input type="text" id="projectName" name="projectName" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="projectDesc">وصف المشروع</label>
+                    <textarea id="projectDesc" name="projectDesc" rows="4" required></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="projectCategory">تصنيف المشروع</label>
+                    <select id="projectCategory" name="projectCategory" required>
+                        <option value="">اختر التصنيف</option>
+                        <option value="web">تطوير ويب</option>
+                        <option value="mobile">تطبيقات موبايل</option>
+                        <option value="desktop">برامج سطح المكتب</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="projectImage">صورة المشروع</label>
+                    <div class="file-upload-area single-image">
+                        <label for="projectImage" class="file-upload-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <div>اسحب الصورة هنا أو انقر للاختيار</div>
+                            <small>يمكنك رفع صورة واحدة بحد أقصى 5 ميجابايت</small>
+                        </label>
+                        <input type="file" id="projectImage" name="projectImage" accept="image/*">
+                        <div class="uploaded-files"></div>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="projectSkills">المهارات المطلوبة</label>
+                    <select id="projectSkills" name="projectSkills" multiple class="skills-select">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="react">React</option>
+                        <option value="nodejs">Node.js</option>
+                        <option value="php">PHP</option>
+                        <option value="laravel">Laravel</option>
+                        <!-- يمكن إضافة المزيد من المهارات -->
+                    </select>
+                    <div class="suggested-skills">
+                        <span class="skill-tag" data-value="html">HTML</span>
+                        <span class="skill-tag" data-value="css">CSS</span>
+                        <span class="skill-tag" data-value="javascript">JavaScript</span>
+                        <span class="skill-tag" data-value="react">React</span>
+                        <!-- يمكن إضافة المزيد -->
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="projectBudget">الميزانية المتوقعة (ريال)</label>
+                        <input type="number" id="projectBudget" name="projectBudget" min="0" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="projectDuration">المدة المتوقعة للتسليم</label>
+                        <div class="duration-input">
+                            <input type="number" id="projectDuration" name="projectDuration" min="1" required>
+                            <select id="durationType" name="durationType">
+                                <option value="days">أيام</option>
+                                <option value="weeks">أسابيع</option>
+                                <option value="months">شهور</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="projectFiles">ملفات مرفقة</label>
+                    <div class="file-upload-area">
+                        <label for="projectFiles" class="file-upload-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <div>اسحب الملفات هنا أو انقر للاختيار</div>
+                            <small>يمكنك رفع عدة ملفات بحد أقصى 10 ميجابايت لكل ملف</small>
+                        </label>
+                        <input type="file" id="projectFiles" name="projectFiles" multiple>
+                        <div class="uploaded-files"></div>
+                    </div>
+                </div>
+    
+                <div class="advanced-settings">
+                    <button type="button" class="toggle-advanced">
+                        <i class="fas fa-cog"></i>
+                        إعدادات متقدمة
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="advanced-content">
+                        <div class="custom-questions">
+                            <h3>أسئلة مخصصة للمتقدمين</h3>
+                            <div class="questions-list"></div>
+                            <button type="button" class="add-question-btn">
+                                <i class="fas fa-plus"></i>
+                                إضافة سؤال
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+                <button type="submit" class="submit-btn">إضافة المشروع</button>
+            </form>
+        </div>
+    </div>
+    <div class="search-modal" id="searchModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="search-input-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="ابحث عن مشاريع، مستقلين، خدمات...">
+                    <button class="close-modal">&times;</button>
+                </div>
+            </div>
+            
+            <div class="search-filters">
+                <div class="filter-group">
+                    <h4>تصفية حسب</h4>
+                    <div class="filter-options">
+                        <label>
+                            <input type="checkbox" value="projects">
+                            <span></span> مشاريع
+                        </label>
+                        <label>
+                            <input type="checkbox" value="freelancers">
+                            <span></span> مستقلين
+                        </label>
+                        <label>
+                            <input type="checkbox" value="services">
+                            <span></span> خدمات
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>الميزانية</h4>
+                    <div class="price-range">
+                        <input type="range" min="0" max="10000" value="5000">
+                        <div class="range-values">
+                            <span>0 ريال</span>
+                            <span>10,000 ريال</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trending-searches">
+                <h4>عمليات البحث الشائعة</h4>
+                <div class="trending-tags">
+                    <a href="#">تصميم مواقع</a>
+                    <a href="#">تطوير تطبيقات</a>
+                    <a href="#">تسويق إلكتروني</a>
+                    <a href="#">كتابة محتوى</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html> 
