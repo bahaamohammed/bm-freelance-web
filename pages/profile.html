@@ -38,15 +38,58 @@
                     <i class="fas fa-search"></i>
                 </button>
                 
-                <button class="action-btn messages-btn">
-                    <i class="fas fa-envelope"></i>
-                    <span class="notification-badge">3</span>
-                </button>
+                <div class="messages-dropdown">
+                    <button class="action-btn messages-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    
+                    <div class="messages-menu">
+                        <div class="menu-header">
+                            <h3>الرسائل</h3>
+                            <a href="messages.html">عرض الكل</a>
+                        </div>
+                        <div class="messages-list">
+                            <a href="#" class="message-item unread">
+                                <img src="https://placehold.co/40" alt="صورة المرسل">
+                                <div class="message-content">
+                                    <div class="message-info">
+                                        <h4>سارة أحمد</h4>
+                                        <span class="message-time">منذ 5 دقائق</span>
+                                    </div>
+                                    <p>تم استلام العمل، شكراً جزيلاً...</p>
+                                </div>
+                            </a>
+                            <!-- يمكن تكرار message-item -->
+                        </div>
+                    </div>
+                </div>
                 
-                <button class="action-btn notifications-btn">
-                    <i class="fas fa-bell"></i>
-                    <span class="notification-badge">5</span>
-                </button>
+                <div class="notifications-dropdown">
+                    <button class="action-btn notifications-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    
+                    <div class="notifications-menu">
+                        <div class="menu-header">
+                            <h3>الإشعارات</h3>
+                            <a href="notifications.html">عرض الكل</a>
+                        </div>
+                        <div class="notifications-list">
+                            <a href="#" class="notification-item unread">
+                                <div class="notification-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p>تم قبول عرضك في مشروع "تصميم موقع إلكتروني"</p>
+                                    <span class="notification-time">منذ ساعة</span>
+                                </div>
+                            </a>
+                            <!-- يمكن تكرار notification-item -->
+                        </div>
+                    </div>
+                </div>
 
                 <div class="profile-dropdown">
                     <button class="profile-btn">
@@ -233,6 +276,50 @@
         </div>
     </div>
 
+    <div class="search-modal" id="searchModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="search-input-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="ابحث عن مشاريع، مستقلين، خدمات...">
+                    <button class="close-modal">&times;</button>
+                </div>
+            </div>
+            
+            <div class="search-filters">
+                <div class="filter-group">
+                    <h4>تصفية حسب</h4>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="projects"> مشاريع</label>
+                        <label><input type="checkbox" value="freelancers"> مستقلين</label>
+                        <label><input type="checkbox" value="services"> خدمات</label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>الميزانية</h4>
+                    <div class="price-range">
+                        <input type="range" min="0" max="10000" value="5000">
+                        <div class="range-values">
+                            <span>0 ريال</span>
+                            <span>10,000 ريال</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trending-searches">
+                <h4>عمليات البحث الشائعة</h4>
+                <div class="trending-tags">
+                    <a href="#">تصميم مواقع</a>
+                    <a href="#">تطوير تطبيقات</a>
+                    <a href="#">تسويق إلكتروني</a>
+                    <a href="#">كتابة محتوى</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const profileBtn = document.querySelector('.profile-btn');
@@ -265,6 +352,75 @@
                 tab.classList.add('active');
                 tabContents[index].classList.add('active');
             });
+        });
+
+        const searchBtn = document.querySelector('.search-btn');
+        const searchModal = document.getElementById('searchModal');
+        const closeModal = document.querySelector('.close-modal');
+        const messagesBtn = document.querySelector('.messages-btn');
+        const notificationsBtn = document.querySelector('.notifications-btn');
+        const messagesMenu = document.querySelector('.messages-menu');
+        const notificationsMenu = document.querySelector('.notifications-menu');
+
+        // تفعيل البحث
+        searchBtn.addEventListener('click', () => {
+            searchModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeModal.addEventListener('click', () => {
+            searchModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // إغلاق البحث عند النقر خارجه
+        window.addEventListener('click', (e) => {
+            if (e.target === searchModal) {
+                searchModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // تفعيل قوائم الرسائل والإشعارات
+        messagesBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            messagesMenu.classList.toggle('show');
+            notificationsMenu.classList.remove('show');
+            dropdownMenu.classList.remove('show');
+        });
+
+        notificationsBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            notificationsMenu.classList.toggle('show');
+            messagesMenu.classList.remove('show');
+            dropdownMenu.classList.remove('show');
+        });
+
+        // إضافة مستمع حدث للنقر على مستوى الصفحة
+        document.addEventListener('click', (e) => {
+            // إغلاق قائمة الرسائل إذا تم النقر خارجها
+            if (!e.target.closest('.messages-dropdown')) {
+                messagesMenu.classList.remove('show');
+            }
+            
+            // إغلاق قائمة الإشعارات إذا تم النقر خارجها
+            if (!e.target.closest('.notifications-dropdown')) {
+                notificationsMenu.classList.remove('show');
+            }
+            
+            // إغلاق القائمة المنسدلة للملف الشخصي إذا تم النقر خارجها
+            if (!e.target.closest('.profile-dropdown')) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+
+        // منع انتشار الحدث عند النقر داخل القوائم
+        messagesMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        notificationsMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
         });
     });
     </script>
