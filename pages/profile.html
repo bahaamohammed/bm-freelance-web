@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي - منصة العمل الحر</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="profile-container">
+        <!-- شريط التنقل -->
+        <nav class="main-nav">
+            <div class="nav-brand">منصة العمل الحر</div>
+            <div class="nav-links">
+                <a href="projects.html">المشاريع</a>
+                <a href="messages.html">الرسائل</a>
+                <a href="notifications.html">الإشعارات</a>
+            </div>
+            <div class="nav-profile">
+                <img src="https://placehold.co/40" alt="الصورة الشخصية">
+            </div>
+        </nav>
+
+        <!-- محتوى الملف الشخصي -->
+        <div class="profile-content">
+            <div class="profile-header">
+                <div class="profile-cover">
+                    <img src="https://placehold.co/1200x300" alt="صورة الغلاف">
+                </div>
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <img src="https://placehold.co/150" alt="الصورة الشخصية">
+                    </div>
+                    <div class="profile-details">
+                        <h1>أحمد محمد</h1>
+                        <p class="profile-title">مطور ويب متقدم</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                                <p>التقييم</p>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span>25</span>
+                                <p>مشروع منجز</p>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>5</span>
+                                <p>قيد الانتظار</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- التبويبات -->
+            <div class="profile-tabs">
+                <div class="tabs">
+                    <button class="tab active">معلومات عامة</button>
+                    <button class="tab">المشاريع المنجزة</button>
+                    <button class="tab">معرض الأعمال</button>
+                </div>
+
+                <!-- محتوى التبويب الأول -->
+                <div class="tab-content active">
+                    <div class="info-card">
+                        <h3>المعلومات الشخصية</h3>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>البريد الإلكتروني:</span>
+                            <p>example@domain.com</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-globe"></i>
+                            <span>الموقع الإلكتروني:</span>
+                            <a href="#">www.mywebsite.com</a>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>رقم الهاتف:</span>
+                            <p>+966 50 123 4567</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-user-check"></i>
+                            <span>حالة الحساب:</span>
+                            <p class="status active">نشط</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- محتوى تبويب المشاريع المنجزة -->
+                <div class="tab-content">
+                    <div class="completed-projects">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>تصميم موقع متجر إلكتروني</h3>
+                                <div class="project-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                            <div class="project-details">
+                                <div class="client-info">
+                                    <img src="https://placehold.co/40" alt="صورة العميل">
+                                    <span>محمد أحمد</span>
+                                </div>
+                                <div class="project-date">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>أكتمل في: 15 مارس 2024</span>
+                                </div>
+                            </div>
+                            <p class="project-review">
+                                "عمل ممتاز وتسليم في الوقت المحدد. سعيد جداً بالنتيجة النهائية والتعاون المثمر."
+                            </p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                            </div>
+                        </div>
+
+                        <!-- يمكن تكرار project-card حسب الحاجة -->
+                    </div>
+                </div>
+
+                <!-- محتوى تبويب معرض الأعمال -->
+                <div class="tab-content">
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <div class="portfolio-image">
+                                <img src="https://placehold.co/400x300" alt="عمل 1">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <a href="#" class="preview-btn">
+                                            <i class="fas fa-eye"></i>
+                                            معاينة
+                                        </a>
+                                        <a href="#" class="link-btn">
+                                            <i class="fas fa-link"></i>
+                                            زيارة الموقع
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>تطبيق إدارة المهام</h3>
+                                <p>تطبيق ويب متكامل لإدارة المهام والمشاريع</p>
+                                <div class="portfolio-tags">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- يمكن تكرار portfolio-item حسب الحاجة -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
