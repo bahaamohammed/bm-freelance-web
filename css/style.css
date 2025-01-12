@@ -311,7 +311,7 @@ body {
 }
 
 /* أنماط الملف الشخصي */
-.profile-container {
+.container {
     min-height: 100vh;
     background: #f8f9fa;
 }
@@ -901,7 +901,7 @@ body {
     background: #f8f9fa;
 }
 
-.projects-content {
+.content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
