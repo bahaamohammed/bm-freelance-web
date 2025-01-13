@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أعمالي - منصة العمل الحر</title>
+    <title>الرسائل - منصة العمل الحر</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- نفس شريط التنقل السابق -->
+    <div class="container"><!-- نفس شريط التنقل السابق -->
         <nav class="main-nav">
             <div class="nav-brand"><img src="../images/logo.png" alt="منصة العمل الحر" class="logo"></div>
             <div class="nav-links">
@@ -129,78 +128,94 @@
         </nav>
         <!-- نفس شريط التنقل السابق -->
     <div class="content">
-        <main class="portfolio-page">
-            <header class="portfolio-header">
-                <div class="header-content">
-                    <h1>معرض أعمالي</h1>
-                    <p>عرض إبداعاتي وأفضل مشاريعي المنجزة</p>
-                </div>
-                <button class="add-work-btn">
-                    <i class="fas fa-plus"></i>
-                    إضافة عمل جديد
-                </button>
-            </header>
+        <main class="messages-page">
+            <div class="messages-container">
+                <!-- قائمة المحادثات -->
+                <aside class="conversations-list">
+                    <div class="conversations-header">
+                        <h2>المحادثات</h2>
+                        <div class="conversations-search">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="بحث في المحادثات...">
+                        </div>
+                    </div>
 
-            <section class="portfolio-filters">
-                <div class="filter-tabs">
-                    <button class="filter-tab active" data-filter="all">الكل</button>
-                    <button class="filter-tab" data-filter="web">تصميم مواقع</button>
-                    <button class="filter-tab" data-filter="mobile">تطبيقات موبايل</button>
-                    <button class="filter-tab" data-filter="graphic">تصميم جرافيك</button>
-                    <button class="filter-tab" data-filter="logo">شعارات</button>
-                </div>
-            </section>
-
-            <section class="portfolio-grid">
-                <!-- بطاقة عمل -->
-                <article class="work-card" data-category="web">
-                    <div class="work-image">
-                        <img src="https://placehold.co/600x400" alt="عمل تصميم موقع">
-                        <div class="work-overlay">
-                            <div class="overlay-content">
-                                <h3>تصميم موقع شركة تقنية</h3>
-                                <p>تصميم وتطوير موقع متجاوب مع جميع الأجهزة</p>
-                                <div class="work-tags">
-                                    <span class="tag">HTML</span>
-                                    <span class="tag">CSS</span>
-                                    <span class="tag">JavaScript</span>
+                    <div class="conversations">
+                        <div class="conversation-item active unread">
+                            <img src="https://placehold.co/50" alt="صورة المستخدم" class="user-avatar">
+                            <div class="conversation-content">
+                                <div class="conversation-info">
+                                    <h3>أحمد محمد</h3>
+                                    <span class="time">12:30</span>
                                 </div>
+                                <p class="last-message">شكراً جزيلاً على العمل الرائع...</p>
+                                <span class="unread-badge">2</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="work-info">
-                        <div class="work-meta">
-                            <span class="work-date">
-                                <i class="fas fa-calendar"></i>
-                                2023
-                            </span>
-                            <span class="work-views">
-                                <i class="fas fa-eye"></i>
-                                1.2K
-                            </span>
-                        </div>
-                        <div class="work-actions">
-                            <button class="action-btn preview-btn">
-                                <i class="fas fa-external-link-alt"></i>
-                                معاينة
-                            </button>
-                            <button class="action-btn edit-btn">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="action-btn delete-btn">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-                <!-- كرر بطاقة العمل مع تغيير المحتوى والتصنيف -->
-            </section>
 
-            <div class="load-more">
-                <button class="load-more-btn">
-                    <i class="fas fa-spinner"></i>
-                    تحميل المزيد
-                </button>
+                        <!-- كرر conversation-item -->
+                    </div>
+                </aside>
+
+                <!-- منطقة المحادثة -->
+                <section class="chat-area">
+                    <header class="chat-header">
+                        <div class="chat-user-info">
+                            <img src="https://placehold.co/50" alt="صورة المستخدم" class="user-avatar">
+                            <div class="user-details">
+                                <h3>أحمد محمد</h3>
+                                <span class="status online">متصل الآن</span>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-phone"></i>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-video"></i>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </header>
+
+                    <div class="chat-messages">
+                        <div class="message-date">اليوم</div>
+                        
+                        <div class="message received">
+                            <img src="https://placehold.co/40" alt="صورة المرسل" class="message-avatar">
+                            <div class="message-content">
+                                <p>مرحباً، كيف حالك؟</p>
+                                <span class="message-time">10:30</span>
+                            </div>
+                        </div>
+
+                        <div class="message sent">
+                            <div class="message-content">
+                                <p>أهلاً، الحمد لله بخير. كيف يمكنني مساعدتك؟</p>
+                                <span class="message-time">10:32</span>
+                            </div>
+                        </div>
+
+                        <!-- يمكن تكرار رسائل أكثر -->
+                    </div>
+
+                    <div class="chat-input">
+                        <button class="attachment-btn">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="اكتب رسالتك هنا...">
+                            <button class="emoji-btn">
+                                <i class="far fa-smile"></i>
+                            </button>
+                        </div>
+                        <button class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </section>
             </div>
         </main>
     </div>
