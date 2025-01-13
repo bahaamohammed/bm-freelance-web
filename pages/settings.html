@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإعدادات - منصة العمل الحر</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container"><!-- نفس شريط التنقل السابق -->
+        <nav class="main-nav">
+            <div class="nav-brand"><img src="../images/logo.png" alt="منصة العمل الحر" class="logo"></div>
+            <div class="nav-links">
+                <div class="main-menu">
+                    <a href="projects.html" class="menu-item">
+                        <i class="fas fa-briefcase"></i>
+                        المشاريع
+                    </a>
+                    <a href="add-project.html" class="menu-item">
+                        <i class="fas fa-plus-circle"></i>
+                        أضف مشروع
+                    </a>
+                    <a href="my-proposals.html" class="menu-item">
+                        <i class="fas fa-file-alt"></i>
+                        عروضي
+                    </a>
+                    <a href="portfolio.html" class="menu-item">
+                        <i class="fas fa-images"></i>
+                        أعمالي
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="action-btn search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <div class="messages-dropdown">
+                    <button class="action-btn messages-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    
+                    <div class="messages-menu">
+                        <div class="menu-header">
+                            <h3>الرسائل</h3>
+                            <a href="messages.html">عرض الكل</a>
+                        </div>
+                        <div class="messages-list">
+                            <a href="#" class="message-item unread">
+                                <img src="https://placehold.co/40" alt="صورة المرسل">
+                                <div class="message-content">
+                                    <div class="message-info">
+                                        <h4>سارة أحمد</h4>
+                                        <span class="message-time">منذ 5 دقائق</span>
+                                    </div>
+                                    <p>تم استلام العمل، شكراً جزيلاً...</p>
+                                </div>
+                            </a>
+                            <!-- يمكن تكرار message-item -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="notifications-dropdown">
+                    <button class="action-btn notifications-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    
+                    <div class="notifications-menu">
+                        <div class="menu-header">
+                            <h3>الإشعارات</h3>
+                            <a href="notifications.html">عرض الكل</a>
+                        </div>
+                        <div class="notifications-list">
+                            <a href="#" class="notification-item unread">
+                                <div class="notification-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p>تم قبول عرضك في مشروع "تصميم موقع إلكتروني"</p>
+                                    <span class="notification-time">منذ ساعة</span>
+                                </div>
+                            </a>
+                            <!-- يمكن تكرار notification-item -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <img src="https://placehold.co/40" alt="الصورة الشخصية">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="dropdown-menu">
+                        <a href="profile.html" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            أحمد محمد
+                        </a>
+                        <a href="favorites.html" class="dropdown-item">
+                            <i class="fas fa-heart"></i>
+                            مفضلتي
+                        </a>
+                        <a href="balance.html" class="dropdown-item">
+                            <i class="fas fa-wallet"></i>
+                            الرصيد
+                        </a>
+                        <a href="settings.html" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            الإعدادات
+                        </a>
+                        <a href="help.html" class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            المساعدة
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="logout.html" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            تسجيل الخروج
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- نفس شريط التنقل السابق -->
+    <div class="content">
+        
+        <main class="settings-page">
+            <aside class="settings-sidebar">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://placehold.co/100" alt="الصورة الشخصية">
+                        <button class="change-avatar">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <h3>بهاء محمد</h3>
+                    <span class="user-type">مستقل</span>
+                </div>
+
+                <nav class="settings-nav">
+                    <a href="#profile" class="nav-item active">
+                        <i class="fas fa-user"></i>
+                        الملف الشخصي
+                    </a>
+                    <a href="#membership" class="nav-item">
+                        <i class="fas fa-crown"></i>
+                        العضوية
+                    </a>
+                    <a href="#notifications" class="nav-item">
+                        <i class="fas fa-bell"></i>
+                        الإشعارات
+                    </a>
+                    <a href="#verification" class="nav-item">
+                        <i class="fas fa-check-circle"></i>
+                        إثبات الدخل
+                    </a>
+                    <a href="#personal" class="nav-item">
+                        <i class="fas fa-id-card"></i>
+                        المعلومات الشخصية
+                    </a>
+                    <a href="#payment" class="nav-item">
+                        <i class="fas fa-credit-card"></i>
+                        وسائل الدفع
+                    </a>
+                    <a href="#bank" class="nav-item">
+                        <i class="fas fa-university"></i>
+                        الحسابات البنكية
+                    </a>
+                    <a href="#email" class="nav-item">
+                        <i class="fas fa-envelope"></i>
+                        البريد الإلكتروني
+                    </a>
+                </nav>
+            </aside>
+
+            <div class="settings-content">
+                <!-- قسم الملف الشخصي -->
+                <section id="profile" class="settings-section active">
+                    <h2>الملف الشخصي</h2>
+                    
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label>نوع الحساب*</label>
+                            <div class="account-types">
+                                <label class="account-type">
+                                    <input type="radio" name="accountType" value="client">
+                                    <div class="type-content">
+                                        <i class="fas fa-briefcase"></i>
+                                        <span>صاحب مشاريع</span>
+                                        <small>أبحث عن مستقلين لتنفيذ مشاريعي</small>
+                                    </div>
+                                </label>
+                                <label class="account-type">
+                                    <input type="radio" name="accountType" value="freelancer" checked>
+                                    <div class="type-content">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <span>مستقل</span>
+                                        <small>أبحث عن مشاريع لتنفيذها</small>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="switch-label">
+                                <span>متاح للتوظيف</span>
+                                <div class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </div>
+                            </label>
+                            <small>إزالة هذه الإشارة سيخفي حسابك بشكل مؤقت من نتائج البحث</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>التخصص*</label>
+                            <select>
+                                <option>برمجة، تطوير المواقع والتطبيقات</option>
+                                <!-- المزيد من الخيارات -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>المسمى الوظيفي*</label>
+                            <input type="text" placeholder="أدخل مسمى وظيفي مثل: مطور ويب">
+                        </div>
+
+                        <div class="form-group">
+                            <label>النبذة التعريفية</label>
+                            <textarea rows="5" placeholder="أضف سيرة ذاتية تعرف عن نفسك وتعليمك وخبراتك ومهاراتك"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>المهارات</label>
+                            <div class="skills-input">
+                                <div class="skills-tags">
+                                    <span class="skill-tag">
+                                        لارافيل
+                                        <button type="button" class="remove-skill">×</button>
+                                    </span>
+                                    <!-- المزيد من المهارات -->
+                                </div>
+                                <input type="text" placeholder="أضف مهاراتك">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>الفيديو التعريفي</label>
+                            <input type="url" placeholder="رابط لفيديو لك تعرف به عن نفسك من YouTube أو Vimeo">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="save-btn">
+                                <i class="fas fa-save"></i>
+                                حفظ التغييرات
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- قسم الإشعارات -->
+                <section id="notifications" class="settings-section">
+                    <h2>إعدادات الإشعارات</h2>
+                    
+                    <div class="notifications-settings">
+                        <div class="settings-group">
+                            <h3>الإشعارات البريدية</h3>
+                            <div class="notification-options">
+                                <label class="notification-option">
+                                    <span>الموافقة على مشروع قيد المراجعة</span>
+                                    <div class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </div>
+                                </label>
+                                <!-- المزيد من الخيارات -->
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <h3>الإشعارات الداخلية</h3>
+                            <div class="notification-options">
+                                <!-- خيارات الإشعارات الداخلية -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- باقي الأقسام -->
+            </div>
+        </main>
+    </div>
+    </div>
+    <div class="search-modal" id="searchModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="search-input-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="ابحث عن مشاريع، مستقلين، خدمات...">
+                    <button class="close-modal">&times;</button>
+                </div>
+            </div>
+            
+            <div class="search-filters">
+                <div class="filter-group">
+                    <h4>تصفية حسب</h4>
+                    <div class="filter-options">
+                        <label>
+                            <input type="checkbox" value="projects">
+                            <span></span> مشاريع
+                        </label>
+                        <label>
+                            <input type="checkbox" value="freelancers">
+                            <span></span> مستقلين
+                        </label>
+                        <label>
+                            <input type="checkbox" value="services">
+                            <span></span> خدمات
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>الميزانية</h4>
+                    <div class="price-range">
+                        <input type="range" min="0" max="10000" value="5000">
+                        <div class="range-values">
+                            <span>0 ريال</span>
+                            <span>10,000 ريال</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trending-searches">
+                <h4>عمليات البحث الشائعة</h4>
+                <div class="trending-tags">
+                    <a href="#">تصميم مواقع</a>
+                    <a href="#">تطوير تطبيقات</a>
+                    <a href="#">تسويق إلكتروني</a>
+                    <a href="#">كتابة محتوى</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html> 
