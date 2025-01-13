@@ -423,4 +423,25 @@ document.addEventListener('DOMContentLoaded', function() {
         projectImageUploadedFiles.innerHTML = '';
         projectImageUploadedFiles.appendChild(fileItem);
     }
+
+    // تفعيل التبويبات
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.favorites-section');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // إزالة الحالة النشطة من جميع الأزرار
+                tabBtns.forEach(b => b.classList.remove('active'));
+                // إضافة الحالة النشطة للزر المضغوط
+                btn.classList.add('active');
+
+                // إخفاء جميع الأقسام
+                sections.forEach(section => section.classList.remove('active'));
+                // إظهار القسم المطلوب
+                const targetSection = document.getElementById(btn.dataset.tab);
+                targetSection.classList.add('active');
+            });
+        });
+    });
 }); 
