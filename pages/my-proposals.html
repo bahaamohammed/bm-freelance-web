@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عروضي - منصة العمل الحر</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+         <!-- نفس شريط التنقل السابق -->
+         <nav class="main-nav">
+            <div class="nav-brand"><img src="../images/logo.png" alt="منصة العمل الحر" class="logo"></div>
+            <div class="nav-links">
+                <div class="main-menu">
+                    <a href="projects.html" class="menu-item">
+                        <i class="fas fa-briefcase"></i>
+                        المشاريع
+                    </a>
+                    <a href="add-project.html" class="menu-item">
+                        <i class="fas fa-plus-circle"></i>
+                        أضف مشروع
+                    </a>
+                    <a href="my-proposals.html" class="menu-item">
+                        <i class="fas fa-file-alt"></i>
+                        عروضي
+                    </a>
+                    <a href="portfolio.html" class="menu-item">
+                        <i class="fas fa-images"></i>
+                        أعمالي
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="action-btn search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <div class="messages-dropdown">
+                    <button class="action-btn messages-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    
+                    <div class="messages-menu">
+                        <div class="menu-header">
+                            <h3>الرسائل</h3>
+                            <a href="messages.html">عرض الكل</a>
+                        </div>
+                        <div class="messages-list">
+                            <a href="#" class="message-item unread">
+                                <img src="https://placehold.co/40" alt="صورة المرسل">
+                                <div class="message-content">
+                                    <div class="message-info">
+                                        <h4>سارة أحمد</h4>
+                                        <span class="message-time">منذ 5 دقائق</span>
+                                    </div>
+                                    <p>تم استلام العمل، شكراً جزيلاً...</p>
+                                </div>
+                            </a>
+                            <!-- يمكن تكرار message-item -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="notifications-dropdown">
+                    <button class="action-btn notifications-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    
+                    <div class="notifications-menu">
+                        <div class="menu-header">
+                            <h3>الإشعارات</h3>
+                            <a href="notifications.html">عرض الكل</a>
+                        </div>
+                        <div class="notifications-list">
+                            <a href="#" class="notification-item unread">
+                                <div class="notification-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p>تم قبول عرضك في مشروع "تصميم موقع إلكتروني"</p>
+                                    <span class="notification-time">منذ ساعة</span>
+                                </div>
+                            </a>
+                            <!-- يمكن تكرار notification-item -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <img src="https://placehold.co/40" alt="الصورة الشخصية">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="dropdown-menu">
+                        <a href="profile.html" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            أحمد محمد
+                        </a>
+                        <a href="favorites.html" class="dropdown-item">
+                            <i class="fas fa-heart"></i>
+                            مفضلتي
+                        </a>
+                        <a href="balance.html" class="dropdown-item">
+                            <i class="fas fa-wallet"></i>
+                            الرصيد
+                        </a>
+                        <a href="settings.html" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            الإعدادات
+                        </a>
+                        <a href="help.html" class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            المساعدة
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="logout.html" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            تسجيل الخروج
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- نفس شريط التنقل السابق -->
+    <div class="content">
+        <main class="proposals-page">
+            <header class="page-header">
+                <div class="header-content">
+                    <h1>عروضي</h1>
+                    <p>إدارة وتتبع جميع العروض المقدمة على المشاريع</p>
+                </div>
+            </header>
+
+            <section class="filters-section">
+                <div class="search-wrapper">
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="ابحث في عروضك...">
+                    </div>
+                    
+                    <div class="sort-dropdown">
+                        <select>
+                            <option value="newest">الأحدث</option>
+                            <option value="oldest">الأقدم</option>
+                            <option value="budget-high">الميزانية: من الأعلى</option>
+                            <option value="budget-low">الميزانية: من الأقل</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="status-filter">
+                    <div class="filter-chips">
+                        <label class="chip">
+                            <input type="checkbox" checked>
+                            <span class="chip-content pending">
+                                <i class="fas fa-clock"></i>
+                                بانتظار الموافقة
+                            </span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" checked>
+                            <span class="chip-content in-progress">
+                                <i class="fas fa-spinner"></i>
+                                قيد التنفيذ
+                            </span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" checked>
+                            <span class="chip-content completed">
+                                <i class="fas fa-check"></i>
+                                مكتمل
+                            </span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" checked>
+                            <span class="chip-content rejected">
+                                <i class="fas fa-times"></i>
+                                مستبعد
+                            </span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" checked>
+                            <span class="chip-content closed">
+                                <i class="fas fa-lock"></i>
+                                مغلق
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="proposals-grid">
+                <!-- بطاقة عرض -->
+                <article class="proposal-card">
+                    <div class="card-header">
+                        <span class="status-indicator in-progress">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            قيد التنفيذ
+                        </span>
+                        <button class="more-btn">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="project-info">
+                        <h3>تصميم موقع إلكتروني لشركة تجارية</h3>
+                        <div class="client">
+                            <img src="https://placehold.co/100" alt="صورة العميل">
+                            <span>محمد أحمد</span>
+                        </div>
+                    </div>
+
+                    <div class="proposal-details">
+                        <div class="detail-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <div class="detail-content">
+                                <span class="label">قيمة العرض</span>
+                                <span class="value">5,000 ريال</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <div class="detail-content">
+                                <span class="label">مدة التنفيذ</span>
+                                <span class="value">30 يوم</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="detail-content">
+                                <span class="label">تاريخ التقديم</span>
+                                <span class="value">منذ 5 أيام</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn primary">
+                            <i class="fas fa-eye"></i>
+                            عرض التفاصيل
+                        </button>
+                        <button class="btn secondary">
+                            <i class="fas fa-edit"></i>
+                            تعديل العرض
+                        </button>
+                    </div>
+                </article>
+
+                <!-- يمكن تكرار بطاقة العرض مع تغيير الحالات والمحتوى -->
+            </section>
+
+            <div class="pagination">
+                <button class="page-btn prev">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="page-numbers">
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <span>...</span>
+                    <button>10</button>
+                </div>
+                <button class="page-btn next">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+</div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
