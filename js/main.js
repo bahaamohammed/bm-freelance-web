@@ -424,11 +424,3 @@ document.addEventListener('DOMContentLoaded', function() {
         projectImageUploadedFiles.appendChild(fileItem);
     }
 }); 
-
-$(document).ready(function() {
-    // تطبيق select2 على جميع عناصر select
-    $('select').select2({
-        width: '100%',  // لجعل العرض يتناسب مع الحاوية
-        dir: "rtl"      // للدعم العربي
-    });
-});
