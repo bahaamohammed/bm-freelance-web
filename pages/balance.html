@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رصيد الحساب - منصة العمل الحر</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container"><!-- نفس شريط التنقل السابق -->
+        <nav class="main-nav">
+            <div class="nav-brand"><img src="../images/logo.png" alt="منصة العمل الحر" class="logo"></div>
+            <div class="nav-links">
+                <div class="main-menu">
+                    <a href="projects.html" class="menu-item">
+                        <i class="fas fa-briefcase"></i>
+                        المشاريع
+                    </a>
+                    <a href="add-project.html" class="menu-item">
+                        <i class="fas fa-plus-circle"></i>
+                        أضف مشروع
+                    </a>
+                    <a href="my-proposals.html" class="menu-item">
+                        <i class="fas fa-file-alt"></i>
+                        عروضي
+                    </a>
+                    <a href="portfolio.html" class="menu-item">
+                        <i class="fas fa-images"></i>
+                        أعمالي
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="action-btn search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <div class="messages-dropdown">
+                    <button class="action-btn messages-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    
+                    <div class="messages-menu">
+                        <div class="menu-header">
+                            <h3>الرسائل</h3>
+                            <a href="messages.html">عرض الكل</a>
+                        </div>
+                        <div class="messages-list">
+                            <a href="#" class="message-item unread">
+                                <img src="https://placehold.co/40" alt="صورة المرسل">
+                                <div class="message-content">
+                                    <div class="message-info">
+                                        <h4>سارة أحمد</h4>
+                                        <span class="message-time">منذ 5 دقائق</span>
+                                    </div>
+                                    <p>تم استلام العمل، شكراً جزيلاً...</p>
+                                </div>
+                            </a>
+                            <!-- يمكن تكرار message-item -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="notifications-dropdown">
+                    <button class="action-btn notifications-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    
+                    <div class="notifications-menu">
+                        <div class="menu-header">
+                            <h3>الإشعارات</h3>
+                            <a href="notifications.html">عرض الكل</a>
+                        </div>
+                        <div class="notifications-list">
+                            <a href="#" class="notification-item unread">
+                                <div class="notification-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p>تم قبول عرضك في مشروع "تصميم موقع إلكتروني"</p>
+                                    <span class="notification-time">منذ ساعة</span>
+                                </div>
+                            </a>
+                            <!-- يمكن تكرار notification-item -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <img src="https://placehold.co/40" alt="الصورة الشخصية">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="dropdown-menu">
+                        <a href="profile.html" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            أحمد محمد
+                        </a>
+                        <a href="favorites.html" class="dropdown-item">
+                            <i class="fas fa-heart"></i>
+                            مفضلتي
+                        </a>
+                        <a href="balance.html" class="dropdown-item">
+                            <i class="fas fa-wallet"></i>
+                            الرصيد
+                        </a>
+                        <a href="settings.html" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            الإعدادات
+                        </a>
+                        <a href="help.html" class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            المساعدة
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="logout.html" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            تسجيل الخروج
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- نفس شريط التنقل السابق -->
+    <div class="content">
+        
+        <main class="balance-page">
+            <header class="balance-header">
+                <h1>رصيد الحساب</h1>
+                <button class="add-balance-btn">
+                    <i class="fas fa-plus-circle"></i>
+                    شحن الرصيد
+                </button>
+            </header>
+
+            <section class="balance-cards">
+                <div class="balance-card total">
+                    <div class="card-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>الرصيد الكلي</h3>
+                        <span class="amount">15,000 ريال</span>
+                    </div>
+                </div>
+
+                <div class="balance-card available">
+                    <div class="card-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>الرصيد المتاح</h3>
+                        <span class="amount">8,500 ريال</span>
+                    </div>
+                </div>
+
+                <div class="balance-card pending">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>الرصيد المعلق</h3>
+                        <span class="amount">4,500 ريال</span>
+                    </div>
+                </div>
+
+                <div class="balance-card withdrawable">
+                    <div class="card-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>القابل للسحب</h3>
+                        <span class="amount">2,000 ريال</span>
+                        <button class="withdraw-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            سحب الأرباح
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="transactions-section">
+                <div class="section-header">
+                    <h2>سجل المعاملات</h2>
+                    <div class="filter-group">
+                        <select class="transaction-filter">
+                            <option value="all">جميع المعاملات</option>
+                            <option value="add">إضافة رصيد</option>
+                            <option value="vip">رسوم VIP</option>
+                            <option value="withdraw">سحب أرباح</option>
+                            <option value="complete">إنهاء مشروع</option>
+                            <option value="refund">إعادة مال</option>
+                            <option value="correction">تصحيح صفقة</option>
+                            <option value="cancel">إلغاء صفقة</option>
+                            <option value="extra">عروض إضافية</option>
+                            <option value="invoice">فاتورة</option>
+                        </select>
+                        <i class="fas fa-filter"></i>
+                    </div>
+                </div>
+
+                <div class="transactions-list">
+                    <div class="transaction-item">
+                        <div class="transaction-icon credit">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="transaction-info">
+                            <div class="transaction-details">
+                                <h4>إضافة رصيد</h4>
+                                <span class="date">22 مارس 2024</span>
+                            </div>
+                            <div class="transaction-amount credit">
+                                <span class="amount">+2,000 ريال</span>
+                                <span class="status">مكتمل</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-icon debit">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                        <div class="transaction-info">
+                            <div class="transaction-details">
+                                <h4>رسوم VIP</h4>
+                                <span class="date">20 مارس 2024</span>
+                            </div>
+                            <div class="transaction-amount debit">
+                                <span class="amount">-500 ريال</span>
+                                <span class="status">مكتمل</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- يمكن تكرار transaction-item -->
+                </div>
+
+                <div class="load-more">
+                    <button class="load-more-btn">
+                        <i class="fas fa-spinner"></i>
+                        تحميل المزيد
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+    </div>
+    <div class="search-modal" id="searchModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="search-input-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="ابحث عن مشاريع، مستقلين، خدمات...">
+                    <button class="close-modal">&times;</button>
+                </div>
+            </div>
+            
+            <div class="search-filters">
+                <div class="filter-group">
+                    <h4>تصفية حسب</h4>
+                    <div class="filter-options">
+                        <label>
+                            <input type="checkbox" value="projects">
+                            <span></span> مشاريع
+                        </label>
+                        <label>
+                            <input type="checkbox" value="freelancers">
+                            <span></span> مستقلين
+                        </label>
+                        <label>
+                            <input type="checkbox" value="services">
+                            <span></span> خدمات
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>الميزانية</h4>
+                    <div class="price-range">
+                        <input type="range" min="0" max="10000" value="5000">
+                        <div class="range-values">
+                            <span>0 ريال</span>
+                            <span>10,000 ريال</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trending-searches">
+                <h4>عمليات البحث الشائعة</h4>
+                <div class="trending-tags">
+                    <a href="#">تصميم مواقع</a>
+                    <a href="#">تطوير تطبيقات</a>
+                    <a href="#">تسويق إلكتروني</a>
+                    <a href="#">كتابة محتوى</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html> 
