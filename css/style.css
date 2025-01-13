@@ -3466,3 +3466,272 @@ input:checked+.slider:before {
         z-index: 10;
     }
 }
+
+/* أنماط صفحة الإشعارات */
+.notifications-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ترويسة الإشعارات */
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    animation: slideDown 0.5s ease-out;
+}
+
+.header-content h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.header-content p {
+    color: #666;
+}
+
+.page-header .header-content h1 {
+    color: white;
+}
+
+.page-header .header-content p {
+    color: #f1f1f1;
+}
+
+.notifications-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.notifications-actions button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    background: white;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.notifications-actions button:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* مجموعات الإشعارات */
+.notifications-wrapper {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.date-group {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.date-header {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    padding-right: 15px;
+}
+
+/* بطاقة الإشعار */
+.notification-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification-item:hover {
+    background: #f0f4f8;
+}
+
+.notification-item.unread {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.notification-item.unread::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.notification-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.notification-icon.success {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+
+.notification-icon.warning {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+}
+
+.notification-icon.info {
+    background: rgba(23, 162, 184, 0.1);
+    color: #17a2b8;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.notification-header h4 {
+    font-size: 16px;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.time {
+    font-size: 13px;
+    color: #666;
+}
+
+.notification-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.notification-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn.primary {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.action-btn.secondary {
+    background: transparent;
+    border: 1px solid #e1e1e1;
+    color: #666;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* زر تحميل المزيد */
+.load-more {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.load-more-btn {
+    padding: 12px 30px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* تحريكات */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .notifications-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .notifications-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .notification-actions {
+        flex-direction: column;
+    }
+
+    .action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+button i.fas {
+    margin: -5px;
+}
