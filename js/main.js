@@ -424,24 +424,64 @@ document.addEventListener('DOMContentLoaded', function() {
         projectImageUploadedFiles.appendChild(fileItem);
     }
 
-    // تفعيل التبويبات
-    document.addEventListener('DOMContentLoaded', () => {
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const sections = document.querySelectorAll('.favorites-section');
 
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // إزالة الحالة النشطة من جميع الأزرار
-                tabBtns.forEach(b => b.classList.remove('active'));
-                // إضافة الحالة النشطة للزر المضغوط
-                btn.classList.add('active');
+}); 
 
-                // إخفاء جميع الأقسام
-                sections.forEach(section => section.classList.remove('active'));
-                // إظهار القسم المطلوب
-                const targetSection = document.getElementById(btn.dataset.tab);
-                targetSection.classList.add('active');
-            });
+// تفعيل التبويبات
+document.addEventListener('DOMContentLoaded', () => {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.favorites-section');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // إزالة الحالة النشطة من جميع الأزرار
+            tabBtns.forEach(b => b.classList.remove('active'));
+            // إضافة الحالة النشطة للزر المضغوط
+            btn.classList.add('active');
+
+            // إخفاء جميع الأقسام
+            sections.forEach(section => section.classList.remove('active'));
+            // إظهار القسم المطلوب
+            const targetSection = document.getElementById(btn.dataset.tab);
+            targetSection.classList.add('active');
         });
     });
-}); 
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // تحديد العناصر
+    const navItems = document.querySelectorAll('.settings-nav .nav-item');
+    const sections = document.querySelectorAll('.settings-section');
+
+    // إضافة مستمع الحدث لكل رابط
+    navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // إزالة الكلاس active من جميع الروابط
+            navItems.forEach(nav => nav.classList.remove('active'));
+            
+            // إضافة الكلاس active للرابط المحدد
+            this.classList.add('active');
+            
+            // إخفاء جميع الأقسام
+            sections.forEach(section => {
+                section.classList.remove('active');
+                section.style.opacity = '0';
+                section.style.transform = 'translateX(20px)';
+            });
+            
+            // إظهار القسم المطلوب
+            const targetSection = document.querySelector(this.getAttribute('href'));
+            if (targetSection) {
+                targetSection.classList.add('active');
+                // إضافة تأثير حركي للظهور
+                setTimeout(() => {
+                    targetSection.style.opacity = '1';
+                    targetSection.style.transform = 'translateX(0)';
+                }, 50);
+            }
+        });
+    });
+});

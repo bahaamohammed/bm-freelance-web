@@ -291,7 +291,278 @@
                     </div>
                 </section>
 
-                <!-- باقي الأقسام -->
+                <!-- قسم العضوية -->
+                <section id="membership" class="settings-section">
+                    <h2>العضوية</h2>
+                    <div class="membership-plans">
+                        <div class="plan-card">
+                            <div class="plan-header">
+                                <i class="fas fa-user"></i>
+                                <h3>الباقة الأساسية</h3>
+                                <div class="price">مجاناً</div>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> 10 عروض شهرياً</li>
+                                <li><i class="fas fa-check"></i> دعم فني بالبريد</li>
+                                <li><i class="fas fa-check"></i> ملف شخصي أساسي</li>
+                            </ul>
+                            <button class="plan-btn active">الباقة الحالية</button>
+                        </div>
+
+                        <div class="plan-card premium">
+                            <div class="plan-badge">الأكثر شعبية</div>
+                            <div class="plan-header">
+                                <i class="fas fa-crown"></i>
+                                <h3>الباقة المميزة</h3>
+                                <div class="price">199 ريال/شهرياً</div>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> عروض غير محدودة</li>
+                                <li><i class="fas fa-check"></i> دعم فني على مدار الساعة</li>
+                                <li><i class="fas fa-check"></i> ملف شخصي مميز</li>
+                                <li><i class="fas fa-check"></i> أولوية في الظهور</li>
+                            </ul>
+                            <button class="plan-btn">ترقية الآن</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- قسم إثبات الدخل -->
+                <section id="verification" class="settings-section">
+                    <h2>إثبات الدخل</h2>
+                    <div class="verification-content">
+                        <div class="verification-status pending">
+                            <i class="fas fa-clock"></i>
+                            <h3>قيد المراجعة</h3>
+                            <p>تم استلام وثائقك وهي قيد المراجعة من قبل فريقنا</p>
+                        </div>
+                        
+                        <div class="document-upload">
+                            <h3>المستندات المطلوبة</h3>
+                            <div class="upload-items">
+                                <div class="upload-item">
+                                    <i class="fas fa-id-card"></i>
+                                    <span>الهوية الوطنية</span>
+                                    <button class="upload-btn">رفع المستند</button>
+                                </div>
+                                <div class="upload-item">
+                                    <i class="fas fa-file-invoice"></i>
+                                    <span>إثبات العنوان</span>
+                                    <button class="upload-btn">رفع المستند</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- قسم المعلومات الشخصية -->
+                <section id="personal" class="settings-section">
+                    <h2>المعلومات الشخصية</h2>
+                    <form class="settings-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>الاسم الأول</label>
+                                <input type="text" value="بهاء">
+                            </div>
+                            <div class="form-group">
+                                <label>اسم العائلة</label>
+                                <input type="text" value="محمد">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>تاريخ الميلاد</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="form-group">
+                            <label>رقم الجوال</label>
+                            <div class="phone-input">
+                                <select class="country-code">
+                                    <option value="+966">+966</option>
+                                </select>
+                                <input type="tel" placeholder="5xxxxxxxx">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>العنوان</label>
+                            <textarea rows="3" placeholder="أدخل عنوانك الكامل"></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="save-btn">
+                                <i class="fas fa-save"></i>
+                                حفظ التغييرات
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- قسم وسائل الدفع -->
+                <section id="payment" class="settings-section">
+                    <h2>وسائل الدفع</h2>
+                    <div class="payment-methods">
+                        <div class="payment-card">
+                            <div class="card-header">
+                                <i class="fab fa-cc-visa"></i>
+                                <button class="delete-card"><i class="fas fa-trash"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-number">**** **** **** 4242</div>
+                                <div class="card-info">
+                                    <span>تنتهي في 12/24</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="add-payment-btn">
+                            <i class="fas fa-plus"></i>
+                            إضافة بطاقة جديدة
+                        </button>
+                    </div>
+                </section>
+
+                <!-- قسم الحسابات البنكية -->
+                <section id="bank" class="settings-section">
+                    <h2>الحسابات البنكية</h2>
+                    <div class="bank-accounts">
+                        <!-- الحساب البنكي الحالي -->
+                        <div class="bank-account-card">
+                            <div class="bank-logo">
+                                <img src="../images/alrajhi-bank.png" alt="مصرف الراجحي">
+                            </div>
+                            <div class="account-details">
+                                <div class="account-name">بهاء محمد أحمد</div>
+                                <div class="account-number">
+                                    <span>رقم الحساب (IBAN)</span>
+                                    <strong>SA44 8000 0000 6080 1016 7519</strong>
+                                </div>
+                            </div>
+                            <div class="account-actions">
+                                <button class="edit-account" title="تعديل">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="delete-account" title="حذف">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- إضافة حساب بنكي جديد -->
+                        <button class="add-bank-btn">
+                            <i class="fas fa-plus"></i>
+                            <span>إضافة حساب بنكي جديد</span>
+                        </button>
+
+                        <!-- نموذج إضافة حساب بنكي -->
+                        <form class="bank-form">
+                            <div class="form-group">
+                                <label>اختر البنك*</label>
+                                <select required>
+                                    <option value="">اختر البنك</option>
+                                    <option value="alrajhi">مصرف الراجحي</option>
+                                    <option value="alahli">البنك الأهلي</option>
+                                    <option value="alinma">بنك الإنماء</option>
+                                    <option value="albilad">بنك البلاد</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>اسم صاحب الحساب*</label>
+                                <input type="text" placeholder="الاسم كما يظهر في البنك" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>رقم الآيبان (IBAN)*</label>
+                                <input type="text" placeholder="SA0000000000000000000000" required
+                                       pattern="SA[0-9]{22}" maxlength="24">
+                                <small>يجب أن يبدأ برمز SA متبوعاً بـ 22 رقم</small>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="save-btn">
+                                    <i class="fas fa-save"></i>
+                                    حفظ الحساب البنكي
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- قسم البريد الإلكتروني -->
+                <section id="email" class="settings-section">
+                    <h2>إعدادات البريد الإلكتروني</h2>
+                    
+                    <div class="email-settings">
+                        <!-- البريد الرئيسي -->
+                        <div class="email-section">
+                            <h3>البريد الإلكتروني الرئيسي</h3>
+                            <div class="primary-email">
+                                <div class="email-info">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>bahaa@example.com</span>
+                                    <span class="verified-badge">
+                                        <i class="fas fa-check-circle"></i>
+                                        موثق
+                                    </span>
+                                </div>
+                                <button class="change-email">تغيير البريد</button>
+                            </div>
+                        </div>
+
+                        <!-- البريد الاحتياطي -->
+                        <div class="email-section">
+                            <h3>البريد الإلكتروني الاحتياطي</h3>
+                            <p class="section-desc">أضف بريداً إلكترونياً احتياطياً لتأمين حسابك</p>
+                            
+                            <div class="backup-email">
+                                <div class="email-info">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>bahaa.backup@example.com</span>
+                                    <span class="unverified-badge">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        غير موثق
+                                    </span>
+                                </div>
+                                <div class="email-actions">
+                                    <button class="verify-email">تأكيد البريد</button>
+                                    <button class="remove-email">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- إعدادات الإشعارات البريدية -->
+                        <div class="email-section">
+                            <h3>تفضيلات البريد الإلكتروني</h3>
+                            <div class="email-preferences">
+                                <label class="preference-item">
+                                    <span>النشرة البريدية الأسبوعية</span>
+                                    <div class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </div>
+                                </label>
+                                <label class="preference-item">
+                                    <span>إشعارات المشاريع الجديدة</span>
+                                    <div class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </div>
+                                </label>
+                                <label class="preference-item">
+                                    <span>إشعارات العروض المقبولة</span>
+                                    <div class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
     </div>
