@@ -486,7 +486,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// تفعيل الأسئل� الشائعة
+// تفعيل الأسئلة الشائعة
 document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
     
@@ -565,5 +565,81 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'mailto:support@example.com';
             }
         });
+    });
+});
+
+// تحديث السنة الحالية في الـ footer
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.querySelector('.current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+    // تفعيل النشرة البريدية
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            const email = emailInput.value.trim();
+
+            if (email && isValidEmail(email)) {
+                // هنا يمكن إضافة كود لإرسال البريد إلى الخادم
+                emailInput.value = '';
+                showSubscribeSuccess();
+            } else {
+                showSubscribeError();
+            }
+        });
+    }
+
+    // التحقق من صحة البريد الإلكتروني
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // إظهار رسالة نجاح الاشتراك
+    function showSubscribeSuccess() {
+        const btn = document.querySelector('.subscribe-btn');
+        const icon = btn.querySelector('i');
+        
+        btn.style.backgroundColor = '#4CAF50';
+        icon.className = 'fas fa-check';
+        
+        setTimeout(() => {
+            btn.style.backgroundColor = '';
+            icon.className = 'fas fa-paper-plane';
+        }, 2000);
+    }
+
+    // إظهار رسالة خطأ
+    function showSubscribeError() {
+        const input = document.querySelector('.newsletter-form input');
+        input.classList.add('error');
+        
+        setTimeout(() => {
+            input.classList.remove('error');
+        }, 2000);
+    }
+
+    // تفعيل الرسوم المتحركة عند التمرير
+    const footerSections = document.querySelectorAll('.footer-section');
+    
+    const observerOptions = {
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    footerSections.forEach(section => {
+        observer.observe(section);
     });
 });
