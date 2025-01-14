@@ -485,3 +485,85 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// تفعيل الأسئل� الشائعة
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = question.querySelector('i');
+        
+        question.addEventListener('click', () => {
+            // إغلاق جميع الإجابات المفتوحة
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    const otherIcon = otherItem.querySelector('.faq-question i');
+                    otherAnswer.classList.remove('active');
+                    otherIcon.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // تبديل حالة الإجابة الحالية
+            answer.classList.toggle('active');
+            icon.style.transform = answer.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+    });
+
+    // تفعيل البحث
+    const searchInput = document.querySelector('.search-box input');
+    const faqQuestions = document.querySelectorAll('.faq-question h3');
+    
+    searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        
+        faqQuestions.forEach(question => {
+            const faqItem = question.closest('.faq-item');
+            const text = question.textContent.toLowerCase();
+            
+            if (text.includes(searchTerm)) {
+                faqItem.style.display = 'block';
+            } else {
+                faqItem.style.display = 'none';
+            }
+        });
+    });
+
+    // تحريك البطاقات عند التمرير
+    const animateOnScroll = () => {
+        const cards = document.querySelectorAll('.category-card, .contact-card');
+        
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            const triggerBottom = window.innerHeight * 0.8;
+            
+            if (cardTop < triggerBottom) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    };
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // تشغيل مرة واحدة عند التحميل
+
+    // تفعيل أزرار الاتصال
+    const contactBtns = document.querySelectorAll('.contact-btn');
+    
+    contactBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const type = btn.dataset.type;
+            
+            if (type === 'chat') {
+                // فتح نافذة المحادثة
+                console.log('فتح المحادثة المباشرة');
+            } else if (type === 'email') {
+                // فتح نموذج البريد الإلكتروني
+                window.location.href = 'mailto:support@example.com';
+            }
+        });
+    });
+});
