@@ -179,39 +179,216 @@ nav.scrolled {
 .features-advanced {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
     padding: 5rem 5%;
-    background: var(--white);
+    position: relative;
+    background:
+        linear-gradient(45deg, rgba(37, 99, 235, 0.03) 0%, rgba(30, 64, 175, 0.03) 100%),
+        var(--white);
 }
 
 .feature-box {
-    text-align: center;
-    padding: 2rem;
-    border-radius: 15px;
-    transition: var(--transition);
+    --border-width: 3px;
+    position: relative;
+    padding: 2.5rem;
     background: var(--white);
-    box-shadow: var(--shadow);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
 }
 
-.feature-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+/* === الحدود المتحركة === */
+.feature-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: var(--border-width);
+    background: linear-gradient(45deg,
+            var(--primary-color),
+            var(--accent-color),
+            var(--secondary-color));
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: borderRotate 4s linear infinite;
 }
 
-.feature-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
+@keyframes borderRotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* === الأيقونة المتطورة === */
+.feature-box .feature-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 2rem;
     background: var(--light-bg);
-    border-radius: 50%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    animation: morphIcon 10s linear infinite;
 }
 
-.feature-icon i {
-    font-size: 2rem;
+@keyframes morphIcon {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    25% {
+        border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+
+    50% {
+        border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    }
+
+    75% {
+        border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+
+.feature-box .feature-icon i {
+    font-size: 2.5rem;
     color: var(--primary-color);
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.1);
+    }
+}
+
+/* === العنوان المتحرك === */
+.feature-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.feature-box h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    transition: width 0.3s ease;
+}
+
+.feature-box:hover h3::after {
+    width: 100%;
+}
+
+/* === الوصف المتحرك === */
+.feature-box p {
+    color: var(--text-color);
+    line-height: 1.6;
+    opacity: 0.8;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* === تأثير التحويم === */
+.feature-box:hover {
+    transform: translateY(-15px);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(37, 99, 235, 0.1);
+}
+
+/* === الخلفية المتحركة === */
+.feature-box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(37, 99, 235, 0.1) 0%,
+            transparent 50%);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.feature-box:hover::after {
+    opacity: 1;
+}
+
+/* === العناصر الزخرفية === */
+.feature-box .decorative-dots {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: -20px;
+    bottom: -20px;
+    background-image: radial-gradient(var(--accent-color) 1px, transparent 1px);
+    background-size: 10px 10px;
+    opacity: 0.2;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover .decorative-dots {
+    transform: rotate(45deg) scale(1.2);
+    opacity: 0.4;
+}
+
+/* === تأثير النقر === */
+.feature-box:active {
+    transform: scale(0.98) translateY(-10px);
+}
+
+/* === تأثير العد === */
+.feature-box .counter {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover .counter {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ===== قسم الأقسام ===== */
